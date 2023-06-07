@@ -1,0 +1,28 @@
+{
+  "rates": [
+    {
+      "days": "tues,wed,fri",
+      "times": "1000-2200",
+      "tz": "America/Chicago",
+      "price": 30
+    },
+    {
+      "days": "sat,sun,mon",
+      "times": "1000-2200",
+      "tz": "America/Chicago",
+      "price": 85
+    },
+    {
+      "days": "thurs",
+      "times": "0700-1900",
+      "tz": "America/Chicago",
+      "price": 350
+    },
+    {
+      "days": "tues,thurs,sun",
+      "times": "0200-0600",
+      "tz": "America/Chicago",
+      "price": 150
+    }
+  ]
+}

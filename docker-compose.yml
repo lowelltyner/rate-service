@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+  app:
+    image: 'lowell-rates:latest'
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/rates-db
+      - SPRING_DATASOURCE_USERNAME=rates-db
+      - SPRING_DATASOURCE_PASSWORD=rates-db
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - spring_profiles_active=prod
+
+  db:
+    image: 'postgres:14.7-alpine'
+    container_name: db
+    environment:
+      - POSTGRES_USER=rates-db
+      - POSTGRES_PASSWORD=rates-db
